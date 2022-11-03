@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Dancing+Script&family=Montserrat:wght@400;700&family=Oooh+Baby&family=WindSong&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --fonte: hsl(0, 0%, 0%);
+  --detalhes: hsl(0, 0%, 65%);
+  --base: hsl(12, 14%, 93%);
+}
+
+html, body {
+  scroll-behavior: smooth;
+  font-family: Montserrat;
+  width: 100%;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 18rem 18rem 18rem 18rem;
+  grid-template-areas:
+  'h h d d'
+  'm m d d'
+  'm m p p'
+  'm m p p'
+}
+
+h2 {
+  font-family: 'WindSong', cursive;
+  font-size: 2.5rem;
+}
+
+input {
+  border: none;
+  padding: .4rem;
+  text-transform: uppercase;
+}
+
+/* ----------------- HEADER ----------------- */
+header {
+  grid-area: h;
+  display: flex;
+  gap: 10rem;
+  justify-content: right;
+  align-items: center;
+}
+
+h1 {
+  font-family: 'WindSong', cursive;
+  font-size: 4rem;
+  font-weight: 200;
+  text-align: right;
+  width: 60%;
+  text-transform: lowercase;
+}
+
+header div {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.hoje {
+  font-size: 1.3rem;
+  letter-spacing: .2rem;
+}
+
+.dias-da-semana {
+  font-size: 1.3rem;
+  display: flex;
+  gap: .5rem;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  cursor: pointer;
+  width: 2.5rem;
+  text-align: center;
+  transition: .5s;
+}
+
+input[type="radio"]:checked + label {
+  color: black;
+  font-weight: bold;
+  height: 23px;
+  width: 23px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+/* ----------------- MAIN ----------------- */
+main {
+  grid-area: m;
+  margin: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container-nova-tarefa {
+  display: flex;
+  justify-content: right;
+  z-index: 1;
+}
+
+.container-nova-tarefa > h2 {
+  align-self: flex-end;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.nova-tarefa {
+  display: flex;
+  width: 50%;
+  padding: 2rem;
+  gap: 1rem;
+  background-color: var(--detalhes);
+  border-radius: .5rem;
+  margin-bottom: 1rem;
+}
+
+.nova-tarefa input {
+  width: 90%;
+  border: none;
+}
+
+.nova-tarefa button {
+  color: var(--detalhes);
+  font-weight: 700;
+  width: 10%;
+  border: none;
+  border-radius: .5rem;
+  background-color: var(--base);
+}
+
+.nova-tarefa button:hover {
+  cursor: pointer;
+}
+
+.container-lista-de-tarefas {
+  align-self: flex-end;
+  width: 90%;
+  height: 35rem;
+  background-color: var(--base);
+  padding: 2rem;
+  overflow: auto;
+}
+
+article {
+  display: flex;
+  padding: 1rem;
+  border: 1px solid var(--detalhes);
+  border-radius: .5rem;
+  margin-bottom: 1rem;
+  background-color: var(--base);
+}
+
+.fa-circle,
+.fa-circle-check {
+  flex: 1;
+}
+
+.fa-circle::before,
+.fa-circle-check::before, 
+.fa-star::before, 
+.fa-trash-can::before {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+article > p {
+  flex: 12;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+}
+
+/* ----------------- PRIORIDADES ----------------- */
+section#prioridades {
+  grid-area: p;
+  margin: 4rem;
+}
+
+#prioridades h2 {
+  display: flex;
+  justify-content: center;
+}
+
+#prioridades > article > i {
+  margin: 1rem;
+}
+
+
+
+/* ----------------- DADOS ----------------- */
+aside {
+  grid-area: d;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 4rem;
+}
+
+h3 {
+  background-color: var(--detalhes);
+  text-transform: uppercase;
+  font-weight: 400;
+  padding: 1rem;
+  text-align: center;
+  width: 40%;
+  letter-spacing: .5rem;
+}
+
+.att-dados {
+  width: 40%;
+  padding: 3rem;
+  background-color: var(--base);
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+
+  transform: rotateX(-90deg);
+  transition: .5s ease;
+  transform-origin: top center;
+}
+
+.clicked .att-dados {
+  transform: rotateX(0deg);
+  transition: .5s ease;
+}
+
+.att-dados > label {
+  margin-bottom: .5rem;
+  letter-spacing: .5rem;
+  font-weight: 500;
+}
+
+.att-dados > div {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.att-nome {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+}
+
+.nome {
+  flex: 9;
+  width: 90%;
+  border: none;
+}
+
+.att-dados > div > i {
+  flex: 1;
+}
+
+.att-dados > div > i::before {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ----------------- EXCEÇÕES ----------------- */
+
+.erro {
+  border: 2px solid red !important;
+  border-radius: .5rem !important;
+}
+
+.hidden {
+  display: none !important;
+}

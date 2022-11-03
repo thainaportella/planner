@@ -1,0 +1,68 @@
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+
+@media (max-width: 912px) {
+  /* ---------------- RESET ---------------- */
+  body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 8rem 15% auto auto;
+    grid-template-areas:
+    'd'
+    'h'
+    'p'
+    'm'
+  }
+
+  header {
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 3.2rem;
+  }
+
+  section.prioridades {
+    display: none;
+  }
+
+  .container-nova-tarefa {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nova-tarefa {
+    width: 100%;
+  }
+
+  .container-lista-de-tarefas {
+    align-self: center;
+    width: 100%;
+  }
+
+  aside {
+    align-items: center;
+    margin: 0;
+    height: 5rem;
+  }
+
+  h3 {
+    width: 100%;
+    position: relative;
+  }
+
+  .att-dados {
+    width: 100%;
+    margin-top: 3.3rem;
+    position: absolute;
+  }
+
+}

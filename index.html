@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./responsivo.css">
+  <title>Online Planner</title>
+</head>
+<body>
+  <!---------------- HEADER ---------------->
+  <header>
+    <h1>Seu nome aqui</h1>
+    <div>
+      <p class="hoje"></p>
+      <p class="dias-da-semana">
+
+        <input class="radio" name="dia" id="domingo" type="radio">
+        <label for="domingo">D</label>
+
+        <input class="radio" name="dia" id="segunda" type="radio">
+        <label for="segunda">S</label>
+
+        <input class="radio" name="dia" id="terça" type="radio">
+        <label for="terça">T</label>
+
+        <input id="quarta" name="dia" type="radio">
+        <label for="quarta">Q</label>
+
+        <input id="quinta" name="dia" type="radio">
+        <label for="quinta">Q</label>
+
+        <input id="sexta" name="dia" type="radio">
+        <label for="sexta">S</label>
+
+        <input id="sabado" name="dia" type="radio">
+        <label for="sabado">S</label>
+      </p>
+    </div>   
+  </header>
+  
+  <!---------------- TAREFAS DO DIA ---------------->
+  <main>
+    <section class="container-nova-tarefa">
+      <h2>Tarefas do dia</h2>
+      <div class="nova-tarefa">
+        <input class="input-tarefa" type="text" placeholder="Nova tarefa">
+        <button type="submit" class="add-nova-tarefa">+</button>
+      </div>
+    </section>
+    
+    <section class="container-lista-de-tarefas"></section>
+  </main>
+    
+    <!---------------- PRIORIDADES ---------------->
+  <section id="prioridades">
+    <h2>Prioridades</h2>
+    <article class="container-prioridade">
+      <i class="fa-regular fa-circle fa-xl hidden"></i>
+      <p class="item-p"></p>
+      <i class="fa-solid fa-trash-can fa-xl hidden"></i>
+    </article>
+
+    <article class="container-prioridade">
+      <i class="fa-regular fa-circle fa-xl hidden"></i>
+      <p class="item-p"></p>
+      <i class="fa-solid fa-trash-can fa-xl hidden"></i>
+    </article>
+
+    <article class="container-prioridade">
+      <i class="fa-regular fa-circle fa-xl hidden"></i>
+      <p class="item-p"></p>
+      <i class="fa-solid fa-trash-can fa-xl hidden"></i>
+    </article>
+  </section>
+    
+    <!---------------- ATUALIZAR DADOS ---------------->
+    <aside>
+    <h3 id="atualizar">Atualizar nome</h3>
+    <section class="att-dados">
+      <label for="nome">Nome:</label>
+      <div class="att-nome">
+        <input class="nome" id="nome" name="nome" type="text" placeholder="Seu nome" maxlength="16">
+        <i id="feito" class="fa-solid fa-square-check fa-xl"></i>
+      </div>
+    </section>
+  </aside>
+
+  <!------------------ SCRIPT ------------------------->
+  <script src="https://kit.fontawesome.com/a344bb40e2.js" crossorigin="anonymous"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
