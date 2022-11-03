@@ -260,6 +260,8 @@ const refreshUsingLocalStorage = () => {
   const prioridadesLocalStorage = JSON.parse(localStorage.getItem('prioridades'))
   const nomeLocalStorage = JSON.parse(localStorage.getItem('nome'))
 
+  if (!tarefasLocalStorage && !prioridadesLocalStorage && !nomeLocalStorage) return
+
   nome.innerText = nomeLocalStorage
 
   for(const prioridade of prioridadesLocalStorage) {
